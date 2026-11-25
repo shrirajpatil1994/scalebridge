@@ -6,6 +6,8 @@ India's urban bodies spend enormous sums through processes that are fragmented, 
 
 ScaleBridge is a set of AI modules that sit on top of existing systems (BPMS, MahaTenders, CivitTwin, the CAG's report archive) and make approvals faster, procurement cleaner and audit follow-up continuous, with **humans making every final decision**.
 
+> **Start here: [`docs/IMPACT.md`](docs/IMPACT.md)**: 126 transaction-level audit findings citing ₹3,627 crore, mapped by leakage pattern, with page-level sources.
+>
 > Status: **v0.1 (private)**. Module M4 (audit intelligence over published CAG reports) is working. M1–M3 are specified in [`SKELETON.md`](SKELETON.md).
 
 ---

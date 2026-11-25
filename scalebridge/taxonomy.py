@@ -19,7 +19,7 @@ TAXONOMY: dict[str, dict] = {
     },
     "cost_escalation": {
         "label": "Cost overrun / escalation / time overrun",
-        "patterns": [r"cost (overrun|escalation)", r"time overrun", r"revised (cost|estimate)", r"price variation", r"increased? from ₹?\s?[\d,\.]+ crore to"],
+        "patterns": [r"cost (overrun|escalation)", r"time overrun", r"revised (cost|estimate)", r"price variation"],
     },
     "short_recovery": {
         "label": "Short / non-recovery of dues",
