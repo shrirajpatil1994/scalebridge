@@ -1,6 +1,5 @@
-# SKELETON v0 (for approval): working name **PRAMAAN**
+# ScaleBridge: design skeleton
 
-*"Pramaan" (प्रमाण) = proof / evidence. Alternative names: **Setu** (bridge), **Nagar-OS**.*
 
 **One line:** AI-native re-engineering of approvals, procurement and audit compliance for India's best-funded urban and housing bodies (BMC, MHADA, CIDCO, MMRDA, SRA), starting with a one-district pilot in Maharashtra, plus an audit-intelligence layer built only on published CAG reports.
 
@@ -90,10 +89,9 @@ corpus/              research extracts (Scale, India)
 - Only published CAG reports; nothing from your CAG service years that isn't public.
 - Name institutions only via published findings; avoid naming individuals.
 - Synthetic data clearly labelled.
-- Personal GitHub account (shrirajpatil1994), not the Testlify account.
 
-## 10. Decisions needed from you
-1. Name: PRAMAAN / Setu / Nagar-OS / your own?
-2. Which module leads the demo: M4 (CAG reports RAG, fastest, uses your CAG credibility) or M2 (procurement, Scale's gap)?
-3. Pilot district to name in the repo (or keep it generic: "a Maharashtra municipal corporation")?
-4. Public repo from day one, or private until v0.1 is polished?
+## 10. Decisions made
+1. Name: **ScaleBridge**.
+2. Lead module for the demo: **M4, audit intelligence over published CAG reports** (v0.1 built; see `eval/results.md`).
+3. Pilot: **Mumbai**, embedding with BMC and related departments.
+4. Procurement module (M2) reuses generic design principles from tender-pipeline experience (`docs/design_principles.md`).
