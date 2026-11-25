@@ -1,0 +1,22 @@
+{"id": "q01", "type": "lookup", "question": "Which additional works did CIDCO award to existing contractors without inviting tenders?", "report_id": "cidco-2019", "pages": [2], "facts": ["awarded additional works valuing ₹ 69.38 crore"]}
+{"id": "q02", "type": "lookup", "question": "How much compensation for delay did CIDCO fail to recover from contractors?", "report_id": "cidco-2019", "pages": [3], "facts": ["185.97 crore"]}
+{"id": "q03", "type": "lookup", "question": "Price variation paid by CIDCO on NMIA land development works despite hill cutting", "report_id": "cidco-2019", "pages": [3, 20], "facts": ["22.08 crore"]}
+{"id": "q04", "type": "lookup", "question": "Were CIDCO contracts awarded by waiving the technical marking criteria for bidders?", "report_id": "cidco-2019", "pages": [13], "facts": ["waiving marking criteria"]}
+{"id": "q05", "type": "lookup", "question": "What was the expenditure on the Mumbai Monorail project as of September 2014?", "report_id": "monorail-2015", "pages": [1], "facts": ["1,923.19 crore"]}
+{"id": "q06", "type": "lookup", "question": "What did audit conclude about the selection of consultants and benchmark prices for the Mumbai monorail?", "report_id": "monorail-2015", "pages": [14], "facts": ["was not transparent"]}
+{"id": "q07", "type": "lookup", "question": "Undue benefit to developers through excess TDR in Slum Rehabilitation Schemes in Pune and Pimpri-Chinchwad", "report_id": "125459", "pages": [287], "facts": ["Transferrable Development Rights", "29.51 crore"]}
+{"id": "q08", "type": "lookup", "question": "Retention money not recovered from contractors' running account bills leading to undue financial benefit", "report_id": "118969", "pages": [320], "facts": ["4.29 crore"]}
+{"id": "q09", "type": "lookup", "question": "Agency appointed for technical services and multi-tasking staff without inviting tenders in Gondia district", "report_id": "118969", "pages": [339], "facts": ["without inviting tenders", "0.55 crore"]}
+{"id": "q10", "type": "lookup", "question": "Which construction workers welfare board appointed HLL Lifecare on nomination basis for health check-ups?", "report_id": "123523", "pages": [185], "facts": ["nomination basis", "HLL Lifecare Limited"]}
+{"id": "q11", "type": "lookup", "question": "How often did the Metropolitan Planning Committees of Aurangabad and Nashik meet?", "report_id": "117101", "pages": [13], "facts": ["did not hold any meeting", "held only one meeting"]}
+{"id": "q12", "type": "lookup", "question": "Shortfall in constitution of Ward Committees in urban local bodies under the 74th amendment", "report_id": "117101", "pages": [13, 14], "facts": ["Ward Committees"]}
+{"id": "q13", "type": "lookup", "question": "Did detailed project reports of ULBs mention legacy waste and dumpsite remediation?", "report_id": "121872", "pages": [145], "facts": ["legacy waste and dumpsite remediation"]}
+{"id": "q14", "type": "lookup", "question": "Building and Other Construction Workers welfare cess collection rate of one per cent of construction cost", "report_id": "125474", "pages": [381], "facts": ["one per cent of the cost of construction"], "report_ids": ["125474", "122158", "123523"]}
+{"id": "q15", "type": "lookup", "question": "Unspent balances lying with the Urban Development Department in DDO accounts", "report_id": "125474", "pages": [138, 384], "facts": ["7,970.24"]}
+{"id": "q16", "type": "lookup", "question": "Mumbai monorail operation and maintenance cost per trip and lump sum O&M cost", "report_id": "monorail-2015", "pages": [12], "facts": ["179.21 crore"]}
+{"id": "q17", "type": "lookup", "question": "IT enabled contracts awarded to MKCL on nomination basis and competitive bidding", "report_id": "monorail-2015", "pages": [38], "facts": ["MKCL on nomination basis"]}
+{"id": "q18", "type": "lookup", "question": "Information Technology audit of the Integrated Financial Management System in Maharashtra", "report_id": "125414", "pages": [208, 209], "facts": ["Integrated Financial Management System"]}
+{"id": "q19", "type": "not_found", "question": "What did the CAG say about cryptocurrency exchanges regulated by SEBI in Mumbai?"}
+{"id": "q20", "type": "not_found", "question": "Audit findings on the Mumbai Indians cricket franchise sponsorship contracts"}
+{"id": "q21", "type": "not_found", "question": "Satellite launch delays at ISRO Sriharikota range"}
+{"id": "q22", "type": "not_found", "question": "Hospital bed occupancy in Kerala district hospitals 2019"}
