@@ -1,63 +1,111 @@
+<div align="center">
+
 # ScaleBridge
 
-**AI-native re-engineering of approvals, procurement and audit compliance for India's best-funded urban and housing bodies, starting with Mumbai.**
+### AI that reads what India's auditors have already written, and turns it into faster approvals, cleaner procurement and fewer repeat failures.
 
-India's urban bodies spend enormous sums through processes that are fragmented, paper-heavy and slow by design. The Brihanmumbai Municipal Corporation alone budgets over ₹80,000 crore a year (FY27), yet a 2023 special audit by the Comptroller & Auditor General (CAG) found ₹214 crore of works awarded without tender and ₹4,756 crore of works executed without contracts. Across Maharashtra's Urban Development Department, ₹11,040 crore of utilisation certificates were pending in 2024-25. The audit trail exists, but no intelligence sits on top of it.
+**Mumbai pilot · Published CAG audit reports · Every answer cited to the page**
 
-ScaleBridge is a set of AI modules that sit on top of existing systems (BPMS, MahaTenders, CivitTwin, the CAG's report archive) and make approvals faster, procurement cleaner and audit follow-up continuous, with **humans making every final decision**.
-
-> **Start here: [`docs/IMPACT.md`](docs/IMPACT.md)**: 126 transaction-level audit findings citing ₹3,627 crore, mapped by leakage pattern, with page-level sources.
->
-> Status: **v0.1 (private)**. Module M4 (audit intelligence over published CAG reports) is working. M1–M3 are specified in [`SKELETON.md`](SKELETON.md).
+</div>
 
 ---
 
-## Modules
+## What 15 published audit reports already tell us
+
+| **126** | **₹3,627 crore** | **6** | **5,592** | **100%** |
+|:---:|:---:|:---:|:---:|:---:|
+| transaction-level audit findings extracted | cited in those findings | leakage patterns mapped | page-anchored passages searchable | of test questions answered with the right report and page |
+
+Read the full study → **[`docs/IMPACT.md`](docs/IMPACT.md)**
+
+```mermaid
+pie showData title Amount cited in audit findings, by pattern (₹ crore)
+    "Idle / parked funds" : 1551.5
+    "Unfruitful or avoidable expenditure" : 773.8
+    "Cost overrun / escalation" : 387.5
+    "Short / non-recovery of dues" : 362.3
+    "Works awarded without tender" : 349.6
+    "Undue benefit to contractors / developers" : 202.5
+```
+
+| Pattern | Findings | ₹ crore cited | Reports |
+|---|---:|---:|---:|
+| Idle / parked funds, pending utilisation certificates | 17 | 1,551.5 | 8 |
+| Unfruitful or avoidable expenditure | 26 | 773.8 | 8 |
+| Cost overrun / escalation | 14 | 387.5 | 4 |
+| Short / non-recovery of dues | 29 | 362.3 | 9 |
+| Works awarded without tender / on nomination | 10 | 349.6 | 5 |
+| Undue benefit to contractors / developers | 30 | 202.5 | 8 |
+
+### Four findings, straight from the reports
+
+> **₹140.04 crore**: supply orders for 66 escalators on the Mumbai Monorail were placed *"without competitive bidding."*
+> <sub>CAG, Maharashtra Report 4 of 2015, Ch. 3, p.13</sub>
+
+> **₹185.97 crore**: compensation for delay *not recovered* by CIDCO across 22 contracts worth ₹4,759.94 crore, though the delays were attributable to contractors.
+> <sub>CAG, PSU Report 5 of 2019 (CIDCO infrastructure), p.21</sub>
+
+> **₹99.30 crore**: 29 additional works outside the original scope *"assigned to the existing contractors without inviting tenders."*
+> <sub>CAG, Annual Technical Inspection Report on Local Bodies 2017, Ch. 3, p.12</sub>
+
+> **₹18.49 crore**: slum FSI sanctioned on a school plot, an *"undue benefit to the developer"* (Slum Rehabilitation Authority, Mumbai).
+> <sub>CAG, Compliance Audit for the year ended March 2024, p.292</sub>
+
+<sub>Amounts are as cited by audit, not a measured loss. Transaction-level findings only (under ₹1,000 crore each); state-wide balances are listed separately in the study. A manual check of the ten largest rows found 8 of 10 amounts correctly attributed; see <a href="docs/IMPACT.md">method and limits</a>.</sub>
+
+---
+
+## Why this matters
+
+The Brihanmumbai Municipal Corporation budgets over **₹80,000 crore** a year (FY27). Yet a 2023 special audit found **₹214 crore** of works awarded without tender and **₹4,756 crore** of works executed without contracts. Maharashtra's Urban Development Department had **₹11,040 crore** of utilisation certificates pending in 2024-25.
+
+The audit trail exists. What's missing is intelligence on top of it: today, every report is read once, filed, and forgotten until the same failure happens again.
+
+| Task | Today | With ScaleBridge |
+|---|---|---|
+| Find every past audit finding on a body, scheme or contractor | Days to weeks of manual reading | Seconds, with page citations |
+| Spot patterns across years and bodies | Rarely done | One table across the whole archive |
+| Prepare for an audit or reply to an observation | Institutional memory | Prior findings and replies, sourced |
+| Stop a known failure in a new tender | Depends on who's in the room | Tender checked against documented failure patterns |
+
+---
+
+## The platform
 
 | | Module | What it does | Status |
 |---|---|---|---|
-| **M4** | **Audit intelligence (CAG reports)** | Cited Q&A and leakage-pattern mining across published CAG reports on Maharashtra urban, housing and infrastructure bodies | **v0.1 working** |
-| M2 | Procurement integrity copilot | Reads tenders, bids and work orders; flags patterns CAG keeps finding (no-tender awards, missing contracts, split works, escalation); drafts the evaluation-committee note | Designed ([`docs/design_principles.md`](docs/design_principles.md)) |
-| M1 | Approvals: NOC orchestration & post-approval compliance | Tracks every NOC against statutory timelines, drafts deficiency letters, checks developer obligations after approval | Specified |
-| M3 | Audit-readiness copilot (auditee side) | Organises evidence and drafts replies to audit observations so inspection-report paras get settled | Specified |
+| **M4** | **Audit intelligence** | Cited Q&A and leakage-pattern mining across published CAG reports | ✅ **v0.1 working** |
+| M2 | Procurement integrity | Reads tenders, bids and work orders; flags no-tender awards, missing contracts, split works, escalation; drafts the committee note | 🧩 Designed ([principles](docs/design_principles.md)) |
+| M1 | Approvals & NOCs | Tracks every NOC against statutory timelines; checks developer obligations after approval | 📐 Specified |
+| M3 | Audit readiness | Helps agencies assemble evidence and reply to audit observations so paras get settled | 📐 Specified |
 
-## M4 quick start
+Full design: [`SKELETON.md`](SKELETON.md) · Go-to-market: [`gtm/`](gtm/) · Evaluation: [`eval/results.md`](eval/results.md)
+
+---
+
+## Try it
 
 ```bash
-pip install -r requirements.txt          # only needed for --llm mode
-python scripts/build_manifest.py         # downloads published CAG reports (public PDFs)
-python -m scalebridge.cli ingest         # PDF -> page-level chunks + local index
+python scripts/build_manifest.py          # download published CAG reports (public PDFs)
+python -m scalebridge.cli ingest          # PDFs -> page-anchored passages + local index
 python -m scalebridge.cli ask "Which works were awarded without inviting tenders?"
-python -m scalebridge.cli ask "What did audit find on CIDCO infrastructure contracts?" --llm
-python -m scalebridge.cli patterns       # leakage taxonomy across all reports
-python eval/run_eval.py                  # retrieval evaluation against the gold set
+python -m scalebridge.cli patterns        # leakage patterns across all reports
+python scripts/impact_report.py           # regenerate docs/IMPACT.md
+python eval/run_eval.py                   # retrieval evaluation
 ```
 
-**How it works**
-1. **Ingest:** published CAG PDFs → page-level text → ~220-word chunks that keep report and page.
-2. **Retrieve:** local BM25 search with an audit-vocabulary expansion (tender ↔ nomination, recovery ↔ dues, idle ↔ unutilised). Runs fully offline, so it can be deployed on a government's own servers.
-3. **Tag:** a transparent rule-based leakage taxonomy (no-tender award, contract gaps, cost escalation, short recovery, idle funds, undue benefit, unfruitful expenditure, records not produced, quality control). Each tag carries the exact matched phrase as evidence.
-4. **Answer:** extractive by default; with `--llm`, Claude writes an answer in which **every sentence must cite a passage**. Uncited sentences are flagged; if the passages don't answer the question, the required reply is "NOT FOUND IN THE PROVIDED REPORTS".
+Optional: `pip install -r requirements.txt` and add `--llm` to `ask` for a Claude-written answer in which every sentence must cite a passage.
 
-## Evaluation first
+---
 
-See [`eval/`](eval/). The gold set pairs questions with the report, page and verbatim facts that must be retrieved, plus "not found" questions that must not produce confident answers. Metrics: hit@k, fact recall@k, not-found accuracy and, with `--llm`, citation validity.
+## Built to be trusted
 
-## Principles
+- **Evidence or nothing:** every output cites report and page; when the evidence isn't there, it says **NOT FOUND**.
+- **People decide:** AI prepares, checks, flags and drafts. Permits, payments, awards and audit replies stay with officials.
+- **Sovereign by design:** search and tagging run fully offline, on an agency's own servers.
+- **Public data only:** published CAG reports and synthetic data; no inspection reports, draft paragraphs or auditee records.
+- **Evaluation first:** gold and held-out question sets, with honest limits documented.
 
-- **People make the final call** on permits, payments, awards and audit replies. AI prepares, checks, flags and drafts.
-- **Evidence or nothing:** every output cites document and page; missing evidence is shown as NOT FOUND, never guessed.
-- **The agency owns its data;** the core runs offline and on-premises.
-- **Public data only in this repository:** published CAG reports and synthetic data. No inspection reports, draft paragraphs or auditee records.
+**Pilot:** Mumbai: BMC and related departments, alongside the Urban Development Department's July 2026 study group on AI-based audit of civic works. Twelve weeks, shadow mode first.
 
-## Pilot: Mumbai
-
-Entry through BMC and related departments, alongside the Urban Development Department's study group on AI and GIS-based audit of civic works (set up July 2026). Twelve weeks, one module, shadow mode first (AI runs alongside staff, no decisions), with success metrics agreed up front. See [`gtm/`](gtm/).
-
-## Why this matters beyond India
-
-The same modules apply to municipal permitting and supreme audit institutions in the Gulf (Dubai and Abu Dhabi permitting, the UAE Accountability Authority, Qatar's State Audit Bureau), with Arabic evaluation sets.
-
-## About
-
-Built by Shriraj Patil: former Audit Officer at the Comptroller & Auditor General of India, co-founder of an RBI-regulated lender, Chief of Staff at an AI company selling to governments.
+**Beyond India:** the same modules apply to municipal permitting and supreme audit institutions in the Gulf, with Arabic evaluation sets.
