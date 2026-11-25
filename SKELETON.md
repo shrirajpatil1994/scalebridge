@@ -70,7 +70,7 @@ Stack: Python, Claude API (or open model for sovereign mode), local vector store
 
 ## 7. Why Scale (and the Gulf)
 - Scale already sells Building Permits Automation, RFQ Evaluation, Contract Extraction and Legal agents to governments, and its Qatar work (MCIT; Ministry of Justice "Shoor", Nov 2026) shows the national-partnership → ministry-app pattern.
-- PRAMAAN shows (a) the same playbook in a new, very large market, (b) a procurement and audit depth Scale's catalogue doesn't show yet, (c) evaluation-first delivery.
+- ScaleBridge shows (a) the same playbook in a new, very large market, (b) a procurement and audit depth Scale's catalogue doesn't show yet, (c) evaluation-first delivery.
 - **Gulf transfer:** same modules for Dubai Municipality / Abu Dhabi DMT permits, government procurement, and supreme audit institutions (UAE Accountability Authority, Qatar State Audit Bureau), with Arabic evaluation sets.
 
 ## 8. Repo layout
